@@ -17,7 +17,7 @@ void loop() {
   delay(30);
   if (Light.LdrRightValue() > Light.LdrLeftValue() && ldrRemove > 80)
   {
-    Light.Left(150,70);
+    Light.Left(150,70); // aa
 
   }
   if (Light.LdrRightValue() < Light.LdrLeftValue() && ldrRemove > 80)
