@@ -5,7 +5,7 @@
 #else
 #include "WProgram.h"
 #endif
-#define m1Dir 13
+#define m1Dir 2
 #define m1En 5
 #define m2Dir 7
 #define m2En 6
