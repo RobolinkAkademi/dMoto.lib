@@ -1,5 +1,4 @@
 #include "dmoto.h"
-
 void dmoto::pinSet(void)
 {
   pinMode(m1Dir, OUTPUT);
@@ -44,7 +43,7 @@ void dmoto::Forward(int pwm)
 {
   digitalWrite(m1Dir, HIGH);
   analogWrite(m1En, pwm);
-  digitalWrite(m2Dir, LOW);
+  digitalWrite(m2Dir, HIGH);
   analogWrite(m2En, pwm);
 
 
@@ -54,7 +53,7 @@ void dmoto::Backward(int pwm)
 {
   digitalWrite(m1Dir, LOW);
   analogWrite(m1En, pwm);
-  digitalWrite(m2Dir, HIGH);
+  digitalWrite(m2Dir, LOW);
   analogWrite(m2En, pwm);
 
 }
@@ -69,9 +68,9 @@ void dmoto::Stop(void)
 }
 void dmoto::Right(int pwm1,int pwm2)
 {
-  digitalWrite(m1Dir, LOW);
+  digitalWrite(m1Dir, HIGH);
   analogWrite(m1En, pwm1);
-  digitalWrite(m2Dir, LOW);
+  digitalWrite(m2Dir, HIGH);
   analogWrite(m2En, pwm2);
 
 }
@@ -83,6 +82,23 @@ void dmoto::Left(int pwm1,int pwm2)
   analogWrite(m2En, pwm2);
 
 }
+void dmoto::BackRight(int pwm1,int pwm2)
+{
+  digitalWrite(m1Dir, LOW);
+  analogWrite(m1En, pwm1);
+  digitalWrite(m2Dir, LOW);
+  analogWrite(m2En, pwm2);
+
+}
+void dmoto::BackLeft(int pwm1,int pwm2)
+{
+  digitalWrite(m1Dir, LOW);
+  analogWrite(m1En, pwm1);
+  digitalWrite(m2Dir, LOW);
+  analogWrite(m2En, pwm2);
+
+}
+
 
 bool dmoto::sensor1(void)
 {
