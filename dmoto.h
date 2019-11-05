@@ -5,6 +5,9 @@
 #else
 #include "WProgram.h"
 #endif
+#include <RF24.h>
+#include <SPI.h>
+#include <nRF24L01.h>
 #define m1Dir 2
 #define m1En 5
 #define m2Dir 7
@@ -34,20 +37,15 @@ class dmoto
     void Backward(int);
     void Right(int, int);
     void Left(int, int);
+    void BackRight(int, int);
+    void BackLeft(int, int);
     void Stop(void);
     float LdrRightValue(void);
     float LdrLeftValue(void);
     bool sensor1(void);
     bool sensor2(void);
     bool sensor3(void);
-
-
-
-
-
   private:
-
-
 };
 #endif
 
