@@ -17,7 +17,7 @@ void loop() {
   {
    obstacle.Backward(150);
     delay(150);
-  obstacle.Right(150,150);
+  obstacle.Right(0,150);
     delay(250);
   }
   else
