@@ -43,20 +43,20 @@ void loop()
   if (received[3] == 1 && received[5] == 1)
   {
 
-    Rodeo.Left(70, 150);
+    Rodeo.Left(60, Speed);
   }
   else if (received[3] == 1 && received[6] == 1)
   {
-    Rodeo.Right(150, 70);
+    Rodeo.Right(Speed, 60);
   }
   else if (received[4] == 1 && received[6] == 1 )
   {
-    Rodeo.BackRight(150, 70);
+    Rodeo.BackRight(Speed, 60);
 
   }
   else if (received[4] == 1 && received[5] == 1 )
   {
-    Rodeo.BackLeft(70, 150);
+    Rodeo.BackLeft(60, Speed);
   }
   else if (received[3] == 1)
   {
@@ -68,11 +68,11 @@ void loop()
   }
   else if (received[5] == 1)
   {
-    Rodeo.Left(70, 150);
+    Rodeo.Left(60, Speed);
   }
   else if (received[6] == 1)
   {
-    Rodeo.Right(150, 70);
+    Rodeo.Right(Speed, 60);
   }
   if (received[7] == 1)
   {
@@ -161,7 +161,7 @@ void Obstructing()
   {
     Rodeo.Backward(Speed);
     delay(150);
-    Rodeo.Right(0, 150);
+    Rodeo.Right(50, Speed);
     delay(250);
   }
   else
@@ -169,6 +169,5 @@ void Obstructing()
   }
 
 }
-
 
 
